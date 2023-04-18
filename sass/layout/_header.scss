@@ -1,3 +1,27 @@
+@use "../abstracts" as *;
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+header {
+	// TODO : un peu triché avec le bg sinon le "p" était au dessus de la boxshadow
+	margin-block-start: 1rem;
+	text-align: center;
+	background-color: $clr-neutral-300;
+
+	.logo-wrapper {
+		background-color: $clr-neutral-100;
+		padding-block-end: 1rem;
+	}
+
+	// TODO : manage the width of the logo inside a the same mediaquery range (minmax ?)
+	.logo {
+		width: 200px;
+	}
+	p {
+		padding-block: 1.25rem;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+}

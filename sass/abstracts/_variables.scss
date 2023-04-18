@@ -6,13 +6,21 @@
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+	"small": 320px,
+	"medium": 768px,
+	"large": 1024px,
 ) !default;
 
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+/// Colors
+
+$clr-primary: hsl(267, 66%, 60%);
+$clr-primary-light: lighten($clr-primary, 5%);
+$clr-secondary: hsl(317, 100%, 74%);
+$clr-secondary-light: lighten($clr-secondary, 5%);
+$clr-tertiary: hsl(165, 56%, 74%);
+$clr-tertiary-accent: hsl(165, 100%, 26%);
+
+$clr-neutral-100: hsla(0, 0%, 100%, 1);
+$clr-neutral-200: hsla(0, 0%, 97%, 1);
+$clr-neutral-300: hsla(0, 0%, 92%, 1);
+$clr-neutral-800: hsla(0, 0%, 21%, 1);

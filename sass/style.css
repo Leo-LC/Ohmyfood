@@ -5,6 +5,10 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -329,6 +333,31 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /**
  * Hide element while making it readable for screen readers
  * Shamelessly borrowed from HTML5Boilerplate:
@@ -343,4 +372,542 @@ html {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.drop-shadow {
+  box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
+}
+
+header {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  text-align: center;
+  background-color: hsl(0, 0%, 92%);
+}
+
+header .logo-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+}
+
+header .logo {
+  width: 200px;
+}
+
+header p {
+  padding-block: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.drop-shadow {
+  box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
+}
+
+footer {
+  background-color: hsl(0, 0%, 21%);
+  color: hsl(0, 0%, 100%);
+  padding: 2rem 10%;
+  gap: 1rem;
+}
+
+footer .logo {
+  width: 120px;
+  filter: invert(100%);
+}
+
+footer .footer__list {
+  gap: 0.5rem;
+}
+
+footer .footer__list svg {
+  color: hsl(0, 0%, 100%);
+  width: 12px;
+  margin-right: 0.725rem;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.drop-shadow {
+  box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
+}
+
+.button-primary {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 10rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.button-primary::before, .button-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.button-primary::before {
+  background: linear-gradient(45deg, hsl(317, 100%, 74%), hsl(267, 66%, 60%));
+  opacity: 1;
+}
+
+.button-primary::after {
+  background: linear-gradient(45deg, #ff94e1, #a06be1);
+  opacity: 0;
+}
+
+.button-primary:hover::before {
+  opacity: 0;
+}
+
+.button-primary:hover::after {
+  opacity: 1;
+}
+
+.button-primary:hover.drop-shadow {
+  box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.447);
+}
+
+.button-favourite-empty {
+  overflow: visible;
+  cursor: pointer;
+  width: 22px;
+  fill: transparent;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.button-favourite-empty path {
+  stroke: black;
+  stroke-width: 10px;
+}
+
+.button-favourite-empty:hover {
+  opacity: 0;
+}
+
+.button-favourite-empty:hover + .button-favourite-full {
+  opacity: 1;
+  height: 100%;
+}
+
+.button-favourite-full {
+  overflow: visible;
+  cursor: pointer;
+  fill: url(#linear-gradient);
+  width: 22px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  height: 0px;
+}
+
+.button-favourite-full stop[offset="0%"] {
+  stop-color: hsl(267, 66%, 60%);
+}
+
+.button-favourite-full stop[offset="100%"] {
+  stop-color: hsl(317, 100%, 74%);
+}
+
+.fonctionnement__list {
+  counter-reset: my-counter;
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem;
+}
+
+.fonctionnement__list li {
+  counter-increment: my-counter;
+  position: relative;
+  padding: 1.875rem 2rem;
+  border-radius: 1.5rem;
+  margin-block: 1.5rem;
+  background-color: hsl(0, 0%, 97%);
+}
+
+.fonctionnement__list li::before {
+  content: counter(my-counter);
+  background-color: hsl(267, 66%, 60%);
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  left: -1rem;
+  line-height: 1rem;
+  width: 1rem;
+  height: 1rem;
+  top: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.fonctionnement__list svg {
+  width: 20px;
+  aspect-ratio: 1/2;
+  margin-right: 1.25rem;
+}
+
+.restaurants__list {
+  gap: 1rem;
+  align-items: center;
+}
+
+.restaurants__list .card {
+  position: relative;
+  max-width: 80%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.restaurants__list .card:nth-child(-n+2)::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: hsl(165, 56%, 74%);
+  color: hsl(165, 100%, 26%);
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.restaurants__list .card .card__text {
+  grid-auto-columns: 70% 30%;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+
+.restaurants__list .card .card__text h3 {
+  font-weight: 700;
+}
+
+.restaurants__list .card .card__text p {
+  grid-column: 1/2;
+  font-weight: 300;
+}
+
+.restaurants__list .card .card__text .card__text__heart {
+  grid-column: 2;
+  grid-row: 1/3;
+  place-self: center;
+}
+
+.restaurants__list .card .card__img {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* .loader-wrapper {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #222b32;
+	display: grid;
+	place-content: center;
+} */
+.loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  margin: auto;
+  background: #222b32;
+  border-radius: 50%;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+  background: linear-gradient(hsl(267, 66%, 60%), hsl(317, 100%, 74%));
+  animation: loaderAnimation 3s linear forwards;
+}
+
+@keyframes loaderAnimation {
+  0%, 10% {
+    transform: translateY(64px);
+  }
+  90%, 100% {
+    transform: translateY(0px);
+  }
+}
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.drop-shadow {
+  box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  background-color: hsl(0, 0%, 97%);
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 2.125rem 3.5rem;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.fonctionnement {
+  padding: 3rem 1.25rem 4.25rem;
+  gap: 1rem;
+}
+
+.restaurants {
+  background-color: hsl(0, 0%, 97%);
+  padding-block: 3.57rem;
+}
+
+.restaurants h2 {
+  margin-bottom: 1.25rem;
+  margin-left: 10%;
+  font-size: 1.5rem;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
