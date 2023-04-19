@@ -7,33 +7,25 @@
 body {
 	font-family: $ff-body;
 }
-
-.hero {
-	background-color: $clr-neutral-200;
-	text-align: center;
-	align-items: center;
-	gap: 2rem;
-	padding: 2.5rem 2.125rem 3.5rem;
-
-	h1 {
-		font-size: 1.5rem;
-		font-weight: $fw-700;
-	}
-
-	p {
-		font-size: 1.125rem;
-		font-weight: $fw-300;
-	}
+.fonctionnement-wrapper,
+.restaurants-wrapper {
+	display: flex;
+	justify-content: center;
 }
-
 .fonctionnement {
-	padding: 3rem 1.25rem 4.25rem;
+	padding: 3rem 2rem 4.25rem;
 	gap: 1rem;
-}
+	flex-grow: 1;
+	max-width: 1055px;
 
-.restaurants {
+	//TODO : gérer le padding pour 1025, évolutif avec la size max //}
+}
+.restaurants-wrapper {
 	background-color: $clr-neutral-200;
+}
+.restaurants {
 	padding-block: 3.57rem;
+	max-width: 1055px;
 
 	h2 {
 		margin-bottom: 1.25rem;

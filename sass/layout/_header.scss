@@ -12,16 +12,29 @@ header {
 	.logo-wrapper {
 		background-color: $clr-neutral-100;
 		padding-block-end: 1rem;
+
+		@media screen and (width > 1024px) {
+			padding-block: 2rem;
+		}
 	}
 
 	// TODO : manage the width of the logo inside a the same mediaquery range (minmax ?)
 	.logo {
 		width: 200px;
+
+		@media screen and (width > 1024px) {
+			width: 300px;
+		}
 	}
 	p {
 		padding-block: 1.25rem;
 		display: flex;
 		justify-content: center;
 		gap: 1rem;
+
+		@media screen and (width > 1024px) {
+			padding-block: 2rem;
+			font-size: 1.5rem;
+		}
 	}
 }

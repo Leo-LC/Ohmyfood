@@ -400,10 +400,20 @@ header .logo-wrapper {
           padding-block-end: 1rem;
 }
 
+@media screen and (width > 1024px) {
+  header .logo-wrapper {
+    padding-block: 2rem;
+  }
+}
 header .logo {
   width: 200px;
 }
 
+@media screen and (width > 1024px) {
+  header .logo {
+    width: 300px;
+  }
+}
 header p {
   padding-block: 1.25rem;
   display: flex;
@@ -411,6 +421,12 @@ header p {
   gap: 1rem;
 }
 
+@media screen and (width > 1024px) {
+  header p {
+    padding-block: 2rem;
+    font-size: 1.5rem;
+  }
+}
 /**
  * Set up a decent box model on the root element
  */
@@ -484,28 +500,43 @@ a {
   box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
 }
 
-footer {
+.footer-wrapper {
   background-color: hsl(0, 0%, 21%);
+}
+
+.footer {
   color: hsl(0, 0%, 100%);
   padding: 2rem 10%;
   gap: 1rem;
+  flex-grow: 1;
 }
 
-footer .logo {
+@media screen and (width > 1024px) {
+  .footer.flex-col {
+    flex-direction: row-reverse;
+    padding: 4rem 6rem 2rem;
+  }
+}
+.footer .logo {
   width: 120px;
   filter: invert(100%);
 }
 
-footer .footer__list {
+.footer .footer__list {
   gap: 0.5rem;
 }
 
-footer .footer__list svg {
+.footer .footer__list svg {
   color: hsl(0, 0%, 100%);
   width: 12px;
   margin-right: 0.725rem;
 }
 
+@media screen and (width > 1024px) {
+  .footer .footer__list {
+    flex-direction: row;
+  }
+}
 /**
  * Set up a decent box model on the root element
  */
@@ -666,10 +697,37 @@ a {
   stop-color: hsl(317, 100%, 74%);
 }
 
+.hero {
+  background-color: hsl(0, 0%, 97%);
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 2.125rem 3.5rem;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media screen and (width > 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero p {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+@media screen and (width > 1024px) {
+  .fonctionnement__list.flex-col {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
 .fonctionnement__list {
   counter-reset: my-counter;
-  -webkit-padding-start: 2rem;
-          padding-inline-start: 2rem;
 }
 
 .fonctionnement__list li {
@@ -698,6 +756,11 @@ a {
   text-align: center;
 }
 
+@media screen and (width > 1024px) {
+  .fonctionnement__list li {
+    flex: 100%;
+  }
+}
 .fonctionnement__list svg {
   width: 20px;
   aspect-ratio: 1/2;
@@ -709,14 +772,26 @@ a {
   align-items: center;
 }
 
+@media screen and (width > 1024px) {
+  .restaurants__list.flex-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .restaurants__list .card {
   position: relative;
-  max-width: 80%;
+  max-width: 90%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem;
   overflow: hidden;
 }
 
+@media screen and (width > 1024px) {
+  .restaurants__list .card {
+    flex-basis: 45%;
+  }
+}
 .restaurants__list .card:nth-child(-n+2)::before {
   content: "Nouveau";
   position: absolute;
@@ -877,32 +952,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.hero {
-  background-color: hsl(0, 0%, 97%);
-  text-align: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2.5rem 2.125rem 3.5rem;
-}
-
-.hero h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.125rem;
-  font-weight: 300;
+.fonctionnement-wrapper,
+.restaurants-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .fonctionnement {
-  padding: 3rem 1.25rem 4.25rem;
+  padding: 3rem 2rem 4.25rem;
   gap: 1rem;
+  flex-grow: 1;
+  max-width: 1055px;
+}
+
+.restaurants-wrapper {
+  background-color: hsl(0, 0%, 97%);
 }
 
 .restaurants {
-  background-color: hsl(0, 0%, 97%);
   padding-block: 3.57rem;
+  max-width: 1055px;
 }
 
 .restaurants h2 {

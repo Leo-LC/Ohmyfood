@@ -1,14 +1,21 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
 
-// TODO : styliser les counter //
+//TODO : obligé d'override flex-col de cette façon. Pourquoi ? Réintégrer dans nesting//
+@media screen and (width > 1024px) {
+	.fonctionnement__list.flex-col {
+		flex-direction: row;
+		gap: 2.5rem;
+	}
+}
 .fonctionnement__list {
 	counter-reset: my-counter;
-	padding-inline-start: 2rem;
 
 	// TODO : fixer la width des li //
 	//TODO : regarder pour aligner verticalement le texte et les svg //
+
 	li {
+		//TODO : responsive 320 < 345 //
 		counter-increment: my-counter;
 		position: relative;
 		padding: 1.875rem 2rem;
@@ -34,6 +41,10 @@
 			border-radius: 50%;
 			text-align: center;
 		}
+
+		@media screen and (width > 1024px) {
+			flex: 100%;
+		}
 	}
 	svg {
 		width: 20px;
@@ -46,13 +57,24 @@
 	gap: 1rem;
 	align-items: center;
 
+	&.flex-col {
+		@media screen and (width > 1024px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
 	.card {
 		//TODO : fixer la taille des cards //
 		position: relative;
-		max-width: 80%;
+		max-width: 90%;
 		background-color: $clr-neutral-100;
 		border-radius: 1.5rem;
 		overflow: hidden;
+
+		@media screen and (width > 1024px) {
+			flex-basis: 45%;
+		}
 
 		&:nth-child(-n + 2)::before {
 			content: "Nouveau";
