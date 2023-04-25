@@ -387,46 +387,6 @@ a {
   box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
 }
 
-header {
-  -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
-  text-align: center;
-  background-color: hsl(0, 0%, 92%);
-}
-
-header .logo-wrapper {
-  background-color: hsl(0, 0%, 100%);
-  -webkit-padding-after: 1rem;
-          padding-block-end: 1rem;
-}
-
-@media screen and (width > 1024px) {
-  header .logo-wrapper {
-    padding-block: 2rem;
-  }
-}
-header .logo {
-  width: 200px;
-}
-
-@media screen and (width > 1024px) {
-  header .logo {
-    width: 300px;
-  }
-}
-header p {
-  padding-block: 1.25rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-@media screen and (width > 1024px) {
-  header p {
-    padding-block: 2rem;
-    font-size: 1.5rem;
-  }
-}
 /**
  * Set up a decent box model on the root element
  */
@@ -498,6 +458,63 @@ a {
 
 .drop-shadow {
   box-shadow: 0px 6px 8px 0px hsla(0, 0%, 0%, 0.181);
+}
+
+header {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  text-align: center;
+  background-color: hsl(0, 0%, 92%);
+}
+
+header .logo-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+}
+
+@media screen and (width > 1024px) {
+  header .logo-wrapper {
+    padding-block: 2rem;
+  }
+}
+header .logo {
+  width: 200px;
+}
+
+@media screen and (width > 1024px) {
+  header .logo {
+    width: 300px;
+  }
+}
+header p {
+  padding-block: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (width > 1024px) {
+  header p {
+    padding-block: 2rem;
+    font-size: 1.5rem;
+  }
+}
+.header__restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header__restaurant .fa-arrow-left {
+  height: 2rem;
+  margin-right: auto;
+}
+
+.header__restaurant .logo {
+  width: 162px;
+  margin-inline: auto;
 }
 
 .footer-wrapper {
@@ -832,6 +849,10 @@ a {
      object-fit: cover;
 }
 
+.menu__section__item {
+  background-color: hsl(0, 0%, 100%);
+}
+
 /* .loader-wrapper {
 	position: absolute;
 	width: 100vw;
@@ -839,6 +860,7 @@ a {
 	background-color: #222b32;
 	display: grid;
 	place-content: center;
+	z-index: 100;
 } */
 .loader {
   position: relative;
@@ -875,6 +897,140 @@ a {
     transform: translateY(0px);
   }
 }
+.menu {
+  background-color: hsl(0, 0%, 92%);
+  padding: 2rem 1rem 2.5rem;
+  border-radius: 2.5rem 2rem 0 0;
+  position: relative;
+  top: -3rem;
+  margin-bottom: -3rem;
+  gap: 2.5rem;
+}
+
+.menu .menu__restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .menu__restaurant-header .stack {
+  position: relative;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
+.menu .menu__restaurant-header .stack .button-favourite-full {
+  position: absolute;
+  place-self: center;
+}
+
+.menu .menu__restaurant-name {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+}
+
+.menu button {
+  width: 186px;
+  justify-self: center;
+  align-self: center;
+}
+
+.menu__section {
+  gap: 0.75rem;
+}
+
+.menu__section .menu__section__title {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.menu__section .menu__section__title::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 3px;
+  background-color: hsl(165, 56%, 74%);
+}
+
+.menu__section .menu__section__item {
+  filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1));
+  border-radius: 1rem;
+  padding: 0.75rem 0.825rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.menu__section .menu__section__item .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-basis: 90%;
+  overflow: hidden;
+}
+
+.menu__section .menu__section__item .menu__section__item__title,
+.menu__section .menu__section__item .menu__section__item__details {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu__section .menu__section__item .menu__section__item__title {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.menu__section .menu__section__item .menu__section__item__details {
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.menu__section .menu__section__item .menu__section__item__price {
+  font-weight: 500;
+  font-size: 1rem;
+  place-self: flex-end;
+}
+
+.menu__section .menu__section__item .checked {
+  position: absolute;
+  right: -60px;
+  display: grid;
+  place-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  background: hsl(165, 56%, 74%);
+  height: 120%;
+  width: 60px;
+}
+
+.menu__section .menu__section__item .checked path {
+  fill: hsl(0, 0%, 100%);
+}
+
+.menu__section .menu__section__item .checked,
+.menu__section .menu__section__item .text {
+  transition: all 1s ease-in-out;
+}
+
+.menu__section .menu__section__item:hover .checked {
+  right: 0;
+}
+
+.menu__section .menu__section__item:hover .text {
+  flex-basis: calc(90% - 60px);
+}
+
 /**
  * Set up a decent box model on the root element
  */

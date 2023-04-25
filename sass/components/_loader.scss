@@ -2,6 +2,7 @@
 @use "../base" as *;
 
 //TODO : animer la disparition du wrapper à la fin de l'animation
+//TODO : animation en M sur fond noir OU blurry pour voir le fond
 
 /* .loader-wrapper {
 	position: absolute;
@@ -10,6 +11,7 @@
 	background-color: #222b32;
 	display: grid;
 	place-content: center;
+	z-index: 100;
 } */
 
 .loader {

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sass/style.css">
+    <script src="https://kit.fontawesome.com/bf28b7cad2.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-wrapper drop-shadow header__restaurant">
+            <a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="logo" src="/assets/logo/ohmyfood.png" alt="Logo OhMyFood">
+        </div>
+    </header>
+    <main>
+
+        <!-- TODO : Noter l'erreur : avoir construit tout l'HTML au lieu d'une seule card ==> modifs répétitives pertes de temps -->
+        <!-- TODO : Sémantique des div principales -->
+        <!-- TODO : revoir le cours sur BEM (à quel moment mettre des _ et -) -->
+        <div class="hero__restaurant">
+            <img src="/assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La Palette du Gout">
+        </div>
+        <div class="menu flex-col">
+            <div class="menu__restaurant-header">
+                <h1 class="menu__restaurant-name">La palette du goût</h1>
+                <div class="stack">
+                    <svg class="button-favourite-empty menu__restaurant__favorite" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                    </svg>
+                    <svg class="button-favourite-full menu__restaurant__favorite" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        <defs>
+                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
+                                gradientTransform="rotate(90)">
+                                <stop offset="0%" />
+                                <stop offset="100%" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="menu__section flex-col">
+                <h2 class="menu__section__title">Entrées</h2>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Fricassée d'escargots</h3>
+                        <p class="menu__section__item__details">Au piment d'Espelette</p>
+                    </div>
+                    <span class="menu__section__item__price">25€</span>
+
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Foie gras de canard mi-cuit</h3>
+                        <p class="menu__section__item__details">Et ses copeaux de truffe noire</p>
+                    </div>
+                    <span class="menu__section__item__price">35€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Œuf au plat</h3>
+                        <p class="menu__section__item__details">Assaisonné à la truffe sur lit de caviar</p>
+                    </div>
+                    <span class="p menu__section__item__price">20€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+            </div>
+
+
+            <div class="menu__section flex-col">
+                <h2 class="menu__section__title">Plats</h2>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Filet de bœuf aux herbes</h3>
+                        <p class="menu__section__item__details">Accompagné de sa ribambelle de légumes</p>
+
+                    </div><span class="p menu__section__item__price">40€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Parmentier de queue de bœuf</h3>
+                        <p class="menu__section__item__details">À la truffe noire sur sa purée de panais</p>
+                    </div> <span class="p menu__section__item__price">35€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Filet de turbot</h3>
+                        <p class="menu__section__item__details">Aux agrumes</p>
+
+                    </div><span class="p menu__section__item__price">44€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+            </div>
+
+            <div class="menu__section flex-col">
+                <h2 class="menu__section__title">Desserts</h2>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Paris-Brest</h3>
+                        <p class="menu__section__item__details">Revisité</p>
+
+                    </div><span class="p menu__section__item__price">18€</span>
+                    <span class="checked">
+                        <i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Macaron au chocolat d'exception</h3>
+                        <p class="menu__section__item__details">Et glace à la vanille de Madagascar</p>
+
+                    </div><span class="p menu__section__item__price">22€</span>
+                    <span class="checked"><i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+                <div class="menu__section__item">
+                    <div class="text">
+                        <h3 class="menu__section__item__title">Mousse au chocolat</h3>
+                        <p class="menu__section__item__details">Au piment d'Espelette et à la truffe noire</p>
+                    </div>
+                    <span class="p menu__section__item__price">23€</span>
+                    <span class="checked"><i class="fa-solid fa-circle-check"></i></span>
+
+                </div>
+            </div>
+
+            <button class="button-primary drop-shadow">Commander</button>
+        </div>
+
+    </main>
+
+    <footer class="footer-wrapper">
+        <div class="footer flex-col">
+            <div>
+                <img class="logo" src="../assets/logo/ohmyfood.png" alt="">
+            </div>
+            <ul class=" footer__list flex-col">
+                <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i></i>Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

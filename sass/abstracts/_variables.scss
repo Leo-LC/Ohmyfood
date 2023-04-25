@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
-// -----------------------------------------------------------------------------
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
@@ -10,6 +6,8 @@ $breakpoints: (
 	"medium": 768px,
 	"large": 1024px,
 ) !default;
+
+//TODO mixins MQ Breakpoints switch //
 
 /// Colors
 
@@ -27,4 +25,4 @@ $clr-neutral-800: hsla(0, 0%, 21%, 1);
 
 // Paddings
 
-$padding-desktop : 6rem;
+$padding-desktop: 6rem;

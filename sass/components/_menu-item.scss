@@ -1,0 +1,6 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.menu__section__item {
+	background-color: $clr-neutral-100;
+}

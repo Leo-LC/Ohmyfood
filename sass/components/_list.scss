@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
-
+//TODO : gap entre les images des restaurants //
 //TODO : obligé d'override flex-col de cette façon. Pourquoi ? Réintégrer dans nesting//
 @media screen and (width > 1024px) {
 	.fonctionnement__list.flex-col {
@@ -11,7 +11,6 @@
 .fonctionnement__list {
 	counter-reset: my-counter;
 
-	// TODO : fixer la width des li //
 	//TODO : regarder pour aligner verticalement le texte et les svg //
 
 	li {
