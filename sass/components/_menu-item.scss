@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
+
+// TODO : récupérer les items dans _menu pour les component ici //
 .menu__section__item {
 	background-color: $clr-neutral-100;
 }

@@ -1,33 +1,42 @@
 @use "../abstracts" as *;
 @use "../base" as *;
+//TODO : simplifier les animations scroll body et disparition ? //
+//TODO : choisir un design de loader sympa //
 
-//TODO : animer la disparition du wrapper à la fin de l'animation
-//TODO : animation en M sur fond noir OU blurry pour voir le fond
-
-/* .loader-wrapper {
-	position: absolute;
+/* $loader-size: 128px;
+body {
+	overflow: hidden;
+	animation: no-scroll 0.5s 3s forwards;
+}
+.loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: #222b32;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(4px);
 	display: grid;
 	place-content: center;
-	z-index: 100;
-} */
+	z-index: 10;
+	overflow-y: hidden;
+	animation: disappear 0.5s 3s forwards;
+}
 
 .loader {
 	position: relative;
-	width: 64px;
-	height: 64px;
-	background: #fff;
+	width: $loader-size;
+	height: $loader-size;
+	background: rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 	overflow: hidden;
 }
 .loader:after {
 	content: "";
 	position: absolute;
-	inset: 8px;
+	inset: 16px;
 	margin: auto;
-	background: #222b32;
+	background: rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 }
 .loader:before {
@@ -41,10 +50,34 @@
 @keyframes loaderAnimation {
 	0%,
 	10% {
-		transform: translateY(64px);
+		transform: translateY($loader-size);
 	}
 	90%,
 	100% {
 		transform: translateY(0px);
 	}
 }
+
+@keyframes disappear {
+	0%,
+	99% {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	100% {
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+}
+@keyframes no-scroll {
+	0%,
+	99% {
+		overflow: hidden;
+	}
+	100% {
+		overflow: auto;
+	}
+}
+ */

@@ -27,7 +27,6 @@
                 <i class="fa-solid fa-location-dot"></i>
                 Paris, Belleville
             </p>
-            <a href="./restaurants/lapalettedugout.html">click me</a>
         </header>
 
         <main>
@@ -35,9 +34,11 @@
                 <h1>Réservez le menu qui
                     vous convient</h1>
                 <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="button-primary drop-shadow">
-                    Explorer nos restaurants
-                </button>
+                <a href="#restaurants">
+                    <button class="button-primary drop-shadow">
+                        Explorer nos restaurants
+                    </button>
+                </a>
             </div>
 
             <div class="fonctionnement-wrapper">
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <!-- TODO : sémantique ?  -->
-            <div class="restaurants-wrapper">
+            <div class="restaurants-wrapper" id="restaurants">
                 <div class="restaurants flex-col">
                     <h2>Restaurants</h2>
                     <ul class="restaurants__list flex-col">
@@ -71,7 +72,7 @@
                             <img class="card__img" src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                 alt="image resto">
                             <div class="card__text grid">
-                                <h3>La palette du goût</h3>
+                                <h3><a href="./restaurants/lapalettedugout.html">La palette du goût</a></h3>
                                 <p>Ménilmontant</p>
                                 <svg class="button-favourite-empty card__text__heart" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512">

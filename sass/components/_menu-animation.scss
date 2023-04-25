@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.menu__section {
+	opacity: 0;
+	transform: translateY(200px);
+	animation: menu-appear 3s ease forwards;
+}
+
+.menu__section:nth-child(3) {
+	animation-delay: 1s;
+}
+.menu__section:nth-child(4) {
+	animation-delay: 2s;
+}
+
+@keyframes menu-appear {
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.menu__section__item,
+.menu__section__title {
+	transform: translateX(200px);
+	opacity: 0;
+	animation: item-appear 3s ease forwards;
+}
+
+.menu__section__item:nth-child(3) {
+	animation-delay: 0.25s;
+}
+.menu__section__item:nth-child(4) {
+	animation-delay: 0.5s;
+}
+.menu__section__item:nth-child(5) {
+	animation-delay: 4s;
+}
+.menu__section__item:nth-child(6) {
+	animation-delay: 4.25s;
+}
+.menu__section__item:nth-child(7) {
+	animation-delay: 4.75s;
+}
+.menu__section__item:nth-child(8) {
+	animation-delay: 5.5s;
+}
+.menu__section__item:nth-child(9) {
+	animation-delay: 5.5s;
+}
+.menu__section__item:nth-child(10) {
+	animation-delay: 5.5s;
+}
+
+@keyframes item-appear {
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}

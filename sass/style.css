@@ -321,6 +321,11 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -392,6 +397,11 @@ a {
  */
 html {
   box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 /**
@@ -559,6 +569,11 @@ header p {
  */
 html {
   box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 /**
@@ -853,50 +868,84 @@ a {
   background-color: hsl(0, 0%, 100%);
 }
 
-/* .loader-wrapper {
-	position: absolute;
+/* $loader-size: 128px;
+body {
+	overflow: hidden;
+	animation: no-scroll 0.5s 3s forwards;
+}
+.loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: #222b32;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(4px);
 	display: grid;
 	place-content: center;
-	z-index: 100;
-} */
+	z-index: 10;
+	overflow-y: hidden;
+	animation: disappear 0.5s 3s forwards;
+}
+
 .loader {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  background: #fff;
-  border-radius: 50%;
-  overflow: hidden;
+	position: relative;
+	width: $loader-size;
+	height: $loader-size;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	overflow: hidden;
 }
-
 .loader:after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  margin: auto;
-  background: #222b32;
-  border-radius: 50%;
+	content: "";
+	position: absolute;
+	inset: 16px;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
 }
-
 .loader:before {
-  content: "";
-  position: absolute;
-  inset: 0px;
-  margin: auto;
-  background: linear-gradient(hsl(267, 66%, 60%), hsl(317, 100%, 74%));
-  animation: loaderAnimation 3s linear forwards;
+	content: "";
+	position: absolute;
+	inset: 0px;
+	margin: auto;
+	background: linear-gradient($clr-primary, $clr-secondary);
+	animation: loaderAnimation 3s linear forwards;
+}
+@keyframes loaderAnimation {
+	0%,
+	10% {
+		transform: translateY($loader-size);
+	}
+	90%,
+	100% {
+		transform: translateY(0px);
+	}
 }
 
-@keyframes loaderAnimation {
-  0%, 10% {
-    transform: translateY(64px);
-  }
-  90%, 100% {
-    transform: translateY(0px);
-  }
+@keyframes disappear {
+	0%,
+	99% {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	100% {
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
 }
+@keyframes no-scroll {
+	0%,
+	99% {
+		overflow: hidden;
+	}
+	100% {
+		overflow: auto;
+	}
+}
+ */
 .menu {
   background-color: hsl(0, 0%, 92%);
   padding: 2rem 1rem 2.5rem;
@@ -1020,7 +1069,7 @@ a {
 
 .menu__section .menu__section__item .checked,
 .menu__section .menu__section__item .text {
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu__section .menu__section__item:hover .checked {
@@ -1031,11 +1080,81 @@ a {
   flex-basis: calc(90% - 60px);
 }
 
+.menu__section {
+  opacity: 0;
+  transform: translateY(200px);
+  animation: menu-appear 3s ease forwards;
+}
+
+.menu__section:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.menu__section:nth-child(4) {
+  animation-delay: 2s;
+}
+
+@keyframes menu-appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.menu__section__item,
+.menu__section__title {
+  transform: translateX(200px);
+  opacity: 0;
+  animation: item-appear 3s ease forwards;
+}
+
+.menu__section__item:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.menu__section__item:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.menu__section__item:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.menu__section__item:nth-child(6) {
+  animation-delay: 4.25s;
+}
+
+.menu__section__item:nth-child(7) {
+  animation-delay: 4.75s;
+}
+
+.menu__section__item:nth-child(8) {
+  animation-delay: 5.5s;
+}
+
+.menu__section__item:nth-child(9) {
+  animation-delay: 5.5s;
+}
+
+.menu__section__item:nth-child(10) {
+  animation-delay: 5.5s;
+}
+
+@keyframes item-appear {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 /**
  * Set up a decent box model on the root element
  */
 html {
   box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 /**
