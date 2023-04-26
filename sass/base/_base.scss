@@ -12,6 +12,7 @@ html {
 // Provides the default overscoll behavior with trackpads, touchscreen
 html,
 body {
+	scroll-behavior: smooth;
 	overscroll-behavior: none;
 }
 

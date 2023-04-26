@@ -22,3 +22,14 @@
 		font-weight: $fw-300;
 	}
 }
+
+@media screen and (width > 1024px) {
+	.hero__restaurant {
+		overflow: hidden;
+		max-height: 383px;
+
+		img {
+			transform: translateY(-40%);
+		}
+	}
+}

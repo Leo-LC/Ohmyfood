@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
+//TODO : même souci qu'au projet précédent, les menu items shrink si je les center
+
 .menu {
 	background-color: $clr-neutral-300;
 	padding: 2rem 1rem 2.5rem;
@@ -9,11 +11,20 @@
 	top: -3rem;
 	margin-bottom: -3rem;
 	gap: 2.5rem;
+	max-width: 1055px;
+
+	align-items: stretch;
+	margin-inline: auto;
 
 	.menu__restaurant-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media screen and (width > 1024px) {
+			margin-inline: auto;
+			gap: 1rem;
+		}
 
 		.stack {
 			position: relative;
@@ -41,6 +52,10 @@
 
 .menu__section {
 	gap: 0.75rem;
+	max-width: 634px;
+
+	margin-inline: auto;
+	width: 100%;
 
 	.menu__section__title {
 		text-transform: uppercase;
@@ -113,7 +128,7 @@
 			transform: translateY(-50%);
 			padding: 1rem;
 			background: $clr-tertiary;
-			height: 120%;
+			height: 200%;
 			width: $checkmark-width;
 
 			path {

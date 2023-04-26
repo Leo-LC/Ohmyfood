@@ -1,6 +1,9 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
+//TODO : créer des var pour les timer d'animation
+//TODO : check timer / distance d'animation pour les desserts qui apparaissent sous le footer / bouton
+
 .menu__section {
 	opacity: 0;
 	transform: translateY(200px);
