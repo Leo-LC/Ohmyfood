@@ -11,10 +11,10 @@
 }
 
 .menu__section:nth-child(3) {
-	animation-delay: 1s;
+	animation-delay: 0.5s;
 }
 .menu__section:nth-child(4) {
-	animation-delay: 2s;
+	animation-delay: 1s;
 }
 
 @keyframes menu-appear {
@@ -32,12 +32,14 @@
 }
 
 .menu__section__item:nth-child(3) {
-	animation-delay: 0.25s;
-}
-.menu__section__item:nth-child(4) {
 	animation-delay: 0.5s;
 }
-.menu__section__item:nth-child(5) {
+.menu__section__item:nth-child(4) {
+	animation-delay: 0.75s;
+}
+
+//TODO : revoir le delay sur les child, nt-child ne fonctionne pas commme ça //
+/* .menu__section__item:nth-child(5) {
 	animation-delay: 4s;
 }
 .menu__section__item:nth-child(6) {
@@ -54,7 +56,7 @@
 }
 .menu__section__item:nth-child(10) {
 	animation-delay: 5.5s;
-}
+} */
 
 @keyframes item-appear {
 	100% {

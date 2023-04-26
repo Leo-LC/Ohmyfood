@@ -56,8 +56,10 @@
 	gap: 1rem;
 	align-items: center;
 
-	&.flex-col {
-		@media screen and (width > 1024px) {
+	@media screen and (width > 1024px) {
+		gap: 3rem;
+
+		&.flex-col {
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
