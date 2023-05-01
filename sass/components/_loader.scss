@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
-body {
+.body-index {
 	overflow: hidden;
 	animation: no-scroll 0.5s 3s forwards;
 }
@@ -36,6 +36,7 @@ body {
 	letter-spacing: 4px;
 
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-image: linear-gradient(
 		to right,
