@@ -1,10 +1,6 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
-
 .button-primary {
 	position: relative;
 	z-index: 0;
@@ -44,10 +40,6 @@
 		);
 		opacity: 0;
 	}
-
-	//TODO : smooth la fin de l'animation : keyframes ?
-	//TODO : comprendre d'où vient le "jump" à la fin de l'animation.
-	//TODO : augmenter l'intensité de dropshadow
 	&:hover::before {
 		opacity: 0;
 	}
@@ -76,8 +68,6 @@
 	&:hover {
 		opacity: 0;
 	}
-	//TODO : créer des keyframes pour que le coeur dépasse puis revienne à sa place.
-	//TODO : si j'ai que ça a foutre : animer le stroke dashoffset du contour du coeur.
 	&:hover + .button-favourite-full {
 		opacity: 1;
 		height: 100%;

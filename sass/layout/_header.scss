@@ -1,11 +1,7 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
-//TODO : noter question : pourquoi la console s'ouvre en permanence avec le sass watching ?
-//TODO : utiliser compiler pour la version finale autre que sass watch auto ?
-
 header {
-	// TODO : un peu triché avec le bg sinon le "p" était au dessus de la boxshadow
 	margin-block-start: 1rem;
 	text-align: center;
 	background-color: $clr-neutral-300;
@@ -14,16 +10,14 @@ header {
 		background-color: $clr-neutral-100;
 		padding-block-end: 1rem;
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			padding-block: 2rem;
 		}
 	}
-
-	// TODO : manage the width of the logo inside a the same mediaquery range (minmax ?)
 	.logo {
 		width: 200px;
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			width: 300px;
 		}
 	}
@@ -33,14 +27,12 @@ header {
 		justify-content: center;
 		gap: 1rem;
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			padding-block: 2rem;
 			font-size: 1.5rem;
 		}
 	}
 }
-
-//TODO : positionner absolute l'arrow pour center le logo //
 .header__restaurant {
 	position: relative;
 	display: flex;
@@ -54,7 +46,7 @@ header {
 		top: 8px;
 		left: 1.5rem;
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			top: 20px;
 			left: 2rem;
 		}

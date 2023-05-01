@@ -1,9 +1,10 @@
-@use "../abstracts" as *;
+/* @use "../abstracts" as *;
 @use "../base" as *;
-//TODO : simplifier les animations scroll body et disparition ? //
-//TODO : choisir un design de loader sympa //
+ODO : simplifier les animations scroll body et disparition ? ODO : choisir un design de loader sympa ODO : ajout texte ou pourcentage 
 
-/* $loader-size: 128px;
+$loader-size: 128px;
+
+
 body {
 	overflow: hidden;
 	animation: no-scroll 0.5s 3s forwards;
@@ -80,4 +81,5 @@ body {
 		overflow: auto;
 	}
 }
+
  */

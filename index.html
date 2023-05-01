@@ -13,8 +13,9 @@
     <title>OhMyFood</title>
 </head>
 <!-- TODO :Clean TODO  -->
-<!-- TODO :Sémantique -->
 <!-- TODO :Responsive Tablet -->
+<!-- TODO :Github Pages -->
+<!-- TODO :Lien Github pour Armand -->
 
 <body>
     <div class="loader-wrapper">
@@ -30,7 +31,6 @@
                 Paris, Belleville
             </p>
         </header>
-        <!-- TODO : wrapper les cards dans des <a> -->
         <main>
             <div class="hero flex-col">
                 <h1>Réservez le menu qui
@@ -46,135 +46,129 @@
             <div class="fonctionnement-wrapper">
                 <div class="fonctionnement flex-col">
                     <h2>Fonctionnement</h2>
-                    <!-- TODO : utiliser une classe pour link vers components / list  -->
-                    <!-- TODO : ok d'utiliser une classe pour la couleur du i ?  -->
+
                     <ol class="fonctionnement__list flex-col">
-                        <!-- TODO : intégrer les i dans leur propre div pour les centrer ?  -->
-                        <!-- TODO : wrapper les li dans un a ou btn ?  -->
-                        <!-- TODO : color sur css  -->
-                        <li class="drop-shadow"><i class="fa-solid fa-mobile-screen-button"
-                                style="color: #7e7e7e;"></i>Choisissez
+                        <li class="drop-shadow"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez
                             un restaurant
                         </li>
-                        <li class="drop-shadow"><i class="fa-solid fa-list-ul" style="color: #7e7e7e;"></i>Composez
+                        <li class="drop-shadow"><i class="fa-solid fa-list-ul"></i>Composez
                             votre
                             menu</li>
-                        <li class="drop-shadow"><i class="fa-solid fa-store" style="color: #9356dc;"></i>Dégustez au
+                        <li class="drop-shadow"><i class="fa-solid fa-store"></i>Dégustez au
                             restaurant</li>
                     </ol>
                 </div>
             </div>
-            <!-- TODO : sémantique ?  -->
             <div class="restaurants-wrapper" id="restaurants">
                 <div class="restaurants flex-col">
                     <h2>Restaurants</h2>
                     <ul class="restaurants__list flex-col">
-                        <!-- TODO : englober les card dans des <a></a> -->
-                        <li class="card">
-                            <img class="card__img" src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="image resto">
-                            <div class="card__text grid">
-                                <h3><a href="./restaurants/lapalettedugout.html">La palette du goût</a></h3>
-                                <p>Ménilmontant</p>
-                                <svg class="button-favourite-empty card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                </svg>
-                                <svg class="button-favourite-full card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                    <defs>
-                                        <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
-                                            gradientTransform="rotate(90)">
-                                            <stop offset="0%" />
-                                            <stop offset="100%" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <img class="card__img" src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                alt="image resto">
-                            <div class="card__text grid">
-                                <a href="/restaurants/lanoteenchantee.html">
+                        <li class="card"><a href="./restaurants/lapalettedugout.html">
+                                <img class="card__img"
+                                    src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="image resto">
+                                <div class="card__text grid">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                    <svg class="button-favourite-empty card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                    </svg>
+                                    <svg class="button-favourite-full card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                        <defs>
+                                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
+                                                gradientTransform="rotate(90)">
+                                                <stop offset="0%" />
+                                                <stop offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a></li>
+                        <li class="card"> <a href="/restaurants/lanoteenchantee.html">
+                                <img class="card__img" src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                    alt="image resto">
+                                <div class="card__text grid">
+
                                     <h3>La note enchantée</h3>
-                                </a>
-                                <p>Charonne</p>
-                                <svg class="button-favourite-empty card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                </svg>
-                                <svg class="button-favourite-full card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                    <defs>
-                                        <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
-                                            gradientTransform="rotate(90)">
-                                            <stop offset="0%" />
-                                            <stop offset="100%" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <img class="card__img" src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                alt="image resto">
-                            <div class="card__text grid">
-                                <a href="/restaurants/alafrançaise.html">
+
+                                    <p>Charonne</p>
+                                    <svg class="button-favourite-empty card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                    </svg>
+                                    <svg class="button-favourite-full card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                        <defs>
+                                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
+                                                gradientTransform="rotate(90)">
+                                                <stop offset="0%" />
+                                                <stop offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a></li>
+                        <li class="card"><a href="/restaurants/alafrançaise.html">
+                                <img class="card__img" src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                    alt="image resto">
+                                <div class="card__text grid">
+
                                     <h3>À la française</h3>
-                                </a>
-                                <p>Cité Rouge</p>
-                                <svg class="button-favourite-empty card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                </svg>
-                                <svg class="button-favourite-full card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                    <defs>
-                                        <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
-                                            gradientTransform="rotate(90)">
-                                            <stop offset="0%" />
-                                            <stop offset="100%" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="card">
-                            <img class="card__img"
-                                src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="image resto">
-                            <div class="card__text grid">
-                                <h3><a href="/restaurants/ledelicedessens.html">Le délice des sens</a></h3>
-                                <p>Folie-Méricourt</p>
-                                <svg class="button-favourite-empty card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                </svg>
-                                <svg class="button-favourite-full card__text__heart" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-                                    <defs>
-                                        <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
-                                            gradientTransform="rotate(90)">
-                                            <stop offset="0%" />
-                                            <stop offset="100%" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </li>
+
+                                    <p>Cité Rouge</p>
+                                    <svg class="button-favourite-empty card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                    </svg>
+                                    <svg class="button-favourite-full card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                        <defs>
+                                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
+                                                gradientTransform="rotate(90)">
+                                                <stop offset="0%" />
+                                                <stop offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a> </li>
+                        <li class="card"><a href="/restaurants/ledelicedessens.html">
+                                <img class="card__img"
+                                    src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="image resto">
+                                <div class="card__text grid">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                    <svg class="button-favourite-empty card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                    </svg>
+                                    <svg class="button-favourite-full card__text__heart"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                        <defs>
+                                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%"
+                                                gradientTransform="rotate(90)">
+                                                <stop offset="0%" />
+                                                <stop offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </a></li>
                     </ul>
                 </div>
             </div>

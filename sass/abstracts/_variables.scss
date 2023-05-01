@@ -1,14 +1,3 @@
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-	"small": 320px,
-	"medium": 768px,
-	"large": 1024px,
-) !default;
-
-//TODO mixins MQ Breakpoints switch //
-
 /// Colors
 
 $clr-primary: hsl(267, 66%, 60%);

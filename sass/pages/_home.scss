@@ -1,8 +1,5 @@
 @use "../abstracts" as *;
 @use "../base" as *;
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
 
 body {
 	font-family: $ff-body;
@@ -17,8 +14,6 @@ body {
 	gap: 1rem;
 	flex-grow: 1;
 	max-width: 1055px;
-
-	//TODO : gérer le padding pour 1025, évolutif avec la size max //}
 }
 .restaurants-wrapper {
 	background-color: $clr-neutral-200;
@@ -29,8 +24,12 @@ body {
 
 	h2 {
 		margin-bottom: 1.25rem;
-		margin-left: 10%;
+		margin-left: 5%;
 		font-size: 1.5rem;
 		font-weight: $fw-700;
+
+		@include breakpoint(large) {
+			margin-left: 1rem;
+		}
 	}
 }

@@ -1,8 +1,7 @@
 @use "../abstracts/" as *;
 @use "../base/" as *;
-//TODO : gap entre les images des restaurants //
-//TODO : obligé d'override flex-col de cette façon. Pourquoi ? Réintégrer dans nesting//
-@media screen and (width > 1024px) {
+
+@include breakpoint(large) {
 	.fonctionnement__list.flex-col {
 		flex-direction: row;
 		gap: 2.5rem;
@@ -10,18 +9,17 @@
 }
 .fonctionnement__list {
 	counter-reset: my-counter;
-
-	//TODO : regarder pour aligner verticalement le texte et les svg //
-
 	li {
-		//TODO : responsive 320 < 345 //
 		counter-increment: my-counter;
 		position: relative;
 		padding: 1.875rem 2rem;
 		border-radius: 1.5rem;
 		margin-block: 1.5rem;
-
 		background-color: $clr-neutral-200;
+
+		@media screen and (width < 345px) {
+			font-size: 0.75rem;
+		}
 
 		&::before {
 			content: counter(my-counter);
@@ -41,7 +39,7 @@
 			text-align: center;
 		}
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			flex: 100%;
 		}
 	}
@@ -52,11 +50,18 @@
 	}
 }
 
+.fonctionnement__list li svg path {
+	color: #7e7e7e;
+}
+.fonctionnement__list li:last-child svg path {
+	color: #9356dc;
+}
+
 .restaurants__list {
 	gap: 1rem;
 	align-items: center;
 
-	@media screen and (width > 1024px) {
+	@include breakpoint(large) {
 		gap: 3rem;
 
 		&.flex-col {
@@ -66,14 +71,13 @@
 		}
 	}
 	.card {
-		//TODO : fixer la taille des cards //
 		position: relative;
 		max-width: 90%;
 		background-color: $clr-neutral-100;
 		border-radius: 1.5rem;
 		overflow: hidden;
 
-		@media screen and (width > 1024px) {
+		@include breakpoint(large) {
 			flex-basis: 45%;
 		}
 
@@ -115,4 +119,15 @@
 			object-fit: cover;
 		}
 	}
+}
+
+.card {
+	outline: 2px solid transparent;
+	outline-offset: 0px;
+	transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+	outline-color: $clr-primary;
+	outline-offset: 4px;
 }
