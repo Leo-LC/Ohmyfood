@@ -985,91 +985,100 @@ a {
   flex-basis: calc(90% - 60px);
 }
 
-/* @use "../abstracts" as *;
-@use "../base" as *;
-ODO : simplifier les animations scroll body et disparition ? ODO : choisir un design de loader sympa ODO : ajout texte ou pourcentage 
-
-$loader-size: 128px;
-
-
 body {
-	overflow: hidden;
-	animation: no-scroll 0.5s 3s forwards;
+  overflow: hidden;
+  animation: no-scroll 0.5s 3s forwards;
 }
+
 .loader-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(4px);
-	display: grid;
-	place-content: center;
-	z-index: 10;
-	overflow-y: hidden;
-	animation: disappear 0.5s 3s forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: grid;
+  place-content: center;
+  z-index: 10;
+  overflow-y: hidden;
+  animation: disappear 0s 3s forwards;
 }
 
 .loader {
-	position: relative;
-	width: $loader-size;
-	height: $loader-size;
-	background: rgba(255, 255, 255, 0.5);
-	border-radius: 50%;
-	overflow: hidden;
-}
-.loader:after {
-	content: "";
-	position: absolute;
-	inset: 16px;
-	margin: auto;
-	background: rgba(255, 255, 255, 0.5);
-	border-radius: 50%;
-}
-.loader:before {
-	content: "";
-	position: absolute;
-	inset: 0px;
-	margin: auto;
-	background: linear-gradient($clr-primary, $clr-secondary);
-	animation: loaderAnimation 3s linear forwards;
-}
-@keyframes loaderAnimation {
-	0%,
-	10% {
-		transform: translateY($loader-size);
-	}
-	90%,
-	100% {
-		transform: translateY(0px);
-	}
+  width: 120px;
+  height: 50px;
+  position: relative;
 }
 
+.loader-text {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  color: hsl(267, 66%, 60%);
+  font-size: 2rem;
+  letter-spacing: 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, hsl(317, 100%, 74%), hsl(317, 100%, 74%) 50%, hsl(267, 66%, 60%) 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  animation: text_animation 3s ease both infinite;
+}
+
+.load {
+  background-color: hsl(267, 66%, 60%);
+  border-radius: 50px;
+  display: block;
+  height: 16px;
+  width: 128px;
+  bottom: -20px;
+  position: absolute;
+  transform: translateX(0px);
+  overflow: hidden;
+}
+
+.load::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(317, 100%, 74%);
+  border-radius: inherit;
+  animation: loading 3s ease both infinite;
+}
+
+@keyframes loading {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes text_animation {
+  100% {
+    background-position: 0%;
+  }
+}
 @keyframes disappear {
-	0%,
-	99% {
-		width: 100vw;
-		height: 100vh;
-	}
-
-	100% {
-		position: absolute;
-		width: 0;
-		height: 0;
-	}
+  0%, 99% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
 }
 @keyframes no-scroll {
-	0%,
-	99% {
-		overflow: hidden;
-	}
-	100% {
-		overflow: auto;
-	}
+  0%, 99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
 }
-
- */
 .menu {
   background-color: hsl(0, 0%, 92%);
   padding: 2rem 1rem 2.5rem;
