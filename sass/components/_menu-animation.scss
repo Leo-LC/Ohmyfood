@@ -13,14 +13,12 @@
 	animation: item-appear 2.5s ease forwards;
 }
 
-.menu__section__item:nth-child(3) {
-	animation-delay: 0.5s;
-}
-.menu__section__item:nth-child(4) {
-	animation-delay: 0.75s;
-}
-.menu__section__item:nth-child(5) {
-	animation-delay: 1s;
+.menu__section:nth-child(2) {
+	@for $i from 2 through 5 {
+		.menu__section__item:nth-child(#{$i}) {
+			animation-delay: #{($i - 2) * 0.5}s;
+		}
+	}
 }
 
 .menu__section:nth-child(3) {
@@ -29,14 +27,10 @@
 	.menu__section__title {
 		animation-delay: 1s;
 	}
-	.menu__section__item:nth-child(2) {
-		animation-delay: 1.5s;
-	}
-	.menu__section__item:nth-child(3) {
-		animation-delay: 2s;
-	}
-	.menu__section__item:nth-child(4) {
-		animation-delay: 2.5s;
+	@for $i from 2 through 5 {
+		.menu__section__item:nth-child(#{$i}) {
+			animation-delay: #{($i - 2) * 0.5 +1}s;
+		}
 	}
 }
 
@@ -46,14 +40,10 @@
 	.menu__section__title {
 		animation-delay: 1s;
 	}
-	.menu__section__item:nth-child(2) {
-		animation-delay: 1.5s;
-	}
-	.menu__section__item:nth-child(3) {
-		animation-delay: 2s;
-	}
-	.menu__section__item:nth-child(4) {
-		animation-delay: 2.5s;
+	@for $i from 2 through 5 {
+		.menu__section__item:nth-child(#{$i}) {
+			animation-delay: #{($i - 2) * 0.5 +1}s;
+		}
 	}
 }
 
